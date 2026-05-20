@@ -1,0 +1,6 @@
+theme: jekyll-theme-minimal
+title: Zkyxgame - Game Studio
+description: Ebonforge - Deep dark fantasy action RPG
+show_downloads: false
+include:
+  - index.html
