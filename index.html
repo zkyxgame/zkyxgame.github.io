@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zkyxgame - Game Studio | Ebonforge: Relics of the Lost</title>
+    <meta name="description" content="Zkyxgame - An indie game studio creating deep, immersive RPGs. Play Ebonforge: Relics of the Lost, a free offline dark fantasy action RPG with legendary loot, pet hunting, and epic raids.">
+    <meta name="keywords" content="game, RPG, Ebonforge, action RPG, indie game, loot game">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #0a0e27;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1a1f3a 0%, #2d1b4e 100%);
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff6b6b, #c92a2a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff6b6b;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1f3a 0%, #2d1b4e 100%);
+            color: #fff;
+            padding: 5rem 1rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ff6b6b, #ffa94d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b6b, #c92a2a);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #ff6b6b;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 107, 107, 0.1);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 1rem;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        section h3 {
+            color: #fff;
+        }
+
+        /* Game Card */
+        .game-card {
+            background: linear-gradient(135deg, #1a1f3a 0%, #2d1b4e 100%);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.2);
+        }
+
+        .game-card-content {
+            padding: 2rem;
+            color: #fff;
+        }
+
+        .game-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ff6b6b, #ffa94d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .game-subtitle {
+            color: #b0b0b0;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .game-description {
+            color: #d0d0d0;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-box {
+            background: rgba(255, 107, 107, 0.05);
+            border-left: 4px solid #ff6b6b;
+            padding: 1.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover {
+            background: rgba(255, 107, 107, 0.1);
+            transform: translateX(5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-box h4 {
+            color: #ff6b6b;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-box p {
+            color: #d0d0d0;
+            font-size: 0.95rem;
+        }
+
+        /* Download Section */
+        .download-section {
+            background: linear-gradient(135deg, #1a1f3a 0%, #2d1b4e 100%);
+        }
+
+        .download-platforms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .platform-card {
+            background: rgba(255, 107, 107, 0.05);
+            border: 2px solid #ff6b6b;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .platform-card:hover {
+            background: rgba(255, 107, 107, 0.15);
+            transform: scale(1.05);
+        }
+
+        .platform-card h3 {
+            margin-bottom: 1rem;
+            color: #ff6b6b;
+        }
+
+        .platform-card p {
+            color: #d0d0d0;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Coming Soon */
+        .coming-soon {
+            background: rgba(255, 165, 0, 0.1);
+            border: 2px solid #ffa94d;
+            border-radius: 10px;
+            padding: 2rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        .coming-soon h3 {
+            color: #ffa94d;
+            margin-bottom: 0.5rem;
+        }
+
+        .coming-soon p {
+            color: #d0d0d0;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0e27;
+            color: #888;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-top: 1px solid #1a1f3a;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #ff6b6b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffa94d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .game-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🎮 Zkyxgame</div>
+            <ul class="nav-links">
+                <li><a href="#games">Games</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Forge Your Legend</h1>
+            <p>Dive into deep loot-driven RPGs with legendary gear progression, pet hunting, and epic World Boss raids</p>
+            <div class="cta-buttons">
+                <a href="#games" class="btn btn-primary">Play Now</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="container">
+        <h2>Our Games</h2>
+
+        <!-- Ebonforge Game -->
+        <div class="game-card" style="margin-bottom: 3rem;">
+            <div class="game-card-content">
+                <div class="game-title">⚔️ Ebonforge: Relics of the Lost</div>
+                <div class="game-subtitle">Free Offline Dark Fantasy Action RPG</div>
+                <div class="game-description">
+                    Ebonforge: Relics of the Lost is a free offline dark fantasy action RPG with deep gear progression, 
+                    pet & mount hunting, character skill builds, and epic World Boss raids. Forge legendary equipment, 
+                    master class abilities, and challenge demon lords across 100 levels of single-player adventure.
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.ebonforge.relics" class="btn btn-primary" target="_blank">
+                    📱 Download on Google Play
+                </a>
+            </div>
+        </div>
+
+        <!-- Wuxian Monopoly Coming Soon -->
+        <div class="coming-soon">
+            <h3>🏮 Wuxian Monopoly (江湖大富翁)</h3>
+            <p>An exciting new game in development. Stay tuned for more details!</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="container">
+        <h2>Ebonforge: Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">⚔️</div>
+                <h4>Three Combat Classes</h4>
+                <p>Fighter with high HP melee builds, Magic with spell combos, or Rogue with evasion-focused critical strikes.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🎁</div>
+                <h4>Six Rarity Tiers</h4>
+                <p>From Common to Rainbow Set Gear. Fuse, refine, and enhance weapons up to +8 with success-rate scrolls.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🐾</div>
+                <h4>Pet & Mount Hunting</h4>
+                <p>Capture and level companions with unique passive bonuses. Mount slots unlock at level 40 for double the power.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🗡️</div>
+                <h4>Active & Passive Skills</h4>
+                <p>Unlock 20+ active skills per class. Combine 3 actives with weapon skills for unique combat flow.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">👹</div>
+                <h4>World Boss Raids</h4>
+                <p>Cycle-based PvE boss with global damage tracking. Earn rewards based on your contribution percentage.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🏘️</div>
+                <h4>Village Hub</h4>
+                <p>Accept missions, quests, and bounty hunts. Master the Forge, Diamond Shop, Altar, and more.</p>
+            </div>
+        </div>
+
+        <div style="background: rgba(255, 107, 107, 0.05); border-left: 4px solid #ff6b6b; padding: 1.5rem; border-radius: 5px; margin-top: 2rem; color: #d0d0d0;">
+            <strong style="color: #ff6b6b;">Available in 10 Languages:</strong> English, 简体中文, 繁體中文, 日本語, 한국어, Español, Português, Deutsch, Français, Русский
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <h2>Download Ebonforge: Relics of the Lost</h2>
+            <div class="download-platforms">
+                <div class="platform-card">
+                    <h3>📱 Android</h3>
+                    <p>Play on Android devices via Google Play Store</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.ebonforge.relics" class="btn btn-primary" target="_blank">
+                        Download
+                    </a>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: rgba(255, 107, 107, 0.05); border-radius: 10px; color: #d0d0d0;">
+                <strong style="color: #ff6b6b;">Why Play Ebonforge?</strong>
+                <p style="margin-top: 0.5rem;">
+                    If you love loot-driven RPGs like Diablo Immortal, AFK Arena, or Eternium, Ebonforge delivers deep 
+                    build-crafting with single-player progression, idle-friendly auto-attack, and high-stakes World Boss action. 
+                    Free to download and play with optional in-app purchases to accelerate progression.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Zkyxgame. All rights reserved.</p>
+        <p>Forge legendary gear. Hunt companions. Defeat the World Boss.</p>
+        <div class="social-links">
+            <a href="#" title="Discord">Discord</a>
+            <a href="#" title="Twitter">Twitter</a>
+            <a href="#" title="Email">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
