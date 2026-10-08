@@ -170,9 +170,16 @@
             margin-bottom: 1rem;
         }
 
-        .email-highlight {
+        .email-link {
             color: #ff6b6b;
+            text-decoration: none;
             font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .email-link:hover {
+            color: #ffa94d;
+            text-decoration: underline;
         }
 
         /* Footer */
@@ -245,7 +252,7 @@
             <p>Send us an email from the Google account you linked in the game. You do not need to install the game to make this request.</p>
         </div>
         <div class="content-box">
-            <p><strong>Email:</strong> <span class="email-highlight">zkyxgame@gmail.com</span></p>
+            <p><strong>Email:</strong> <a href="mailto:zkyxgame@gmail.com" class="email-link">zkyxgame@gmail.com</a></p>
             <p><strong>Subject:</strong> Delete my account</p>
             <p>We use the email address you write from to find your account, so please send it from the same Google account you linked in the game.</p>
         </div>
@@ -299,7 +306,7 @@
 
         <h2>Questions?</h2>
         <div class="content-box">
-            <p>Email us at <span class="email-highlight">zkyxgame@gmail.com</span></p>
+            <p>Email us at <a href="mailto:zkyxgame@gmail.com" class="email-link">zkyxgame@gmail.com</a></p>
         </div>
     </section>
 
