@@ -78,7 +78,7 @@
 
         section h1 {
             font-size: 2.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 0.5rem;
             text-align: center;
             color: #fff;
             background: linear-gradient(135deg, #ff6b6b, #ffa94d);
@@ -87,9 +87,16 @@
             background-clip: text;
         }
 
+        .subtitle {
+            text-align: center;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
         section h2 {
             font-size: 1.8rem;
-            margin-top: 2rem;
+            margin-top: 2.5rem;
             margin-bottom: 1rem;
             color: #ff6b6b;
         }
@@ -108,7 +115,7 @@
         }
 
         .content-box p {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .content-box strong {
@@ -142,7 +149,7 @@
         }
 
         .steps-box li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .section-content {
@@ -156,7 +163,16 @@
         }
 
         .section-content li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-content p {
+            margin-bottom: 1rem;
+        }
+
+        .email-highlight {
+            color: #ff6b6b;
+            font-weight: 600;
         }
 
         /* Footer */
@@ -222,63 +238,68 @@
     <!-- Delete Account Section -->
     <section class="container">
         <h1>Delete Your Account</h1>
+        <div class="subtitle">Ebonforge: Path to Godhood</div>
 
-        <h2>How to Delete Your Account</h2>
+        <h2>How to Request Deletion</h2>
         <div class="section-content">
-            <p>To delete your account and game data in Ebonforge: Path to Godhood, you have two options:</p>
-        </div>
-
-        <h2>Option 1: Email Request</h2>
-        <div class="section-content">
-            <p>Send an email from the Google account you linked in the game:</p>
+            <p>Send us an email from the Google account you linked in the game. You do not need to install the game to make this request.</p>
         </div>
         <div class="content-box">
-            <p><strong>Email Address:</strong> zkyxgame@gmail.com</p>
+            <p><strong>Email:</strong> <span class="email-highlight">zkyxgame@gmail.com</span></p>
             <p><strong>Subject:</strong> Delete my account</p>
-            <p><strong>Include:</strong> Your Player ID (found in Settings → Player ID)</p>
+            <p>We use the email address you write from to find your account, so please send it from the same Google account you linked in the game.</p>
         </div>
 
-        <h2>Option 2: In-Game Deletion</h2>
+        <h2>What to Include</h2>
         <div class="section-content">
-            <p>Delete your account and all game data directly from the app:</p>
-        </div>
-        <div class="steps-box">
-            <ol>
-                <li>Open the game</li>
-                <li>Go to <strong>Settings</strong></li>
-                <li>Select <strong>Account & Cloud Backup</strong></li>
-                <li>Choose <strong>Delete account & data</strong></li>
-            </ol>
+            <p>If you have it, include your <strong>Player ID</strong>. It helps us find your account faster. Your Player ID is shown at the top of the Settings screen in the game.</p>
         </div>
 
-        <h2>What Gets Deleted</h2>
+        <h2>What We Delete</h2>
         <div class="section-content">
             <ul>
-                <li>Your cloud backups</li>
-                <li>Your account record</li>
-                <li>All game progress and data</li>
+                <li>Your cloud save backups</li>
+                <li>Your account record and its link to your Google account</li>
+                <li>Backup history and any information stored with your backups</li>
             </ul>
+        </div>
+
+        <h2>What Stays on Your Phone</h2>
+        <div class="section-content">
+            <p>Your game progress is also saved on your phone. Deleting your account does not remove it, so you can keep playing offline. Uninstalling the game removes the save from your phone.</p>
         </div>
 
         <h2>What We Keep</h2>
         <div class="section-content">
-            <p>We retain information we're legally required to keep, including:</p>
+            <p>We only keep information we are legally required to keep, such as:</p>
             <ul>
-                <li>Purchase records (for tax and compliance)</li>
-                <li>Other legally mandated information</li>
+                <li>Purchase records needed for tax, accounting and refund purposes</li>
+                <li>Payments are processed by Google Play. We never receive or store your payment card details.</li>
             </ul>
         </div>
 
         <h2>Processing Time</h2>
         <div class="info-box">
-            <p><strong>For email requests:</strong> Account deletion requests are processed within 30 days.</p>
-            <p><strong>For in-game deletion:</strong> Your account is deleted immediately upon confirmation.</p>
+            <p>We process deletion requests within 30 days and reply by email when it is done.</p>
+        </div>
+
+        <h2>Delete Your Account in the Game</h2>
+        <div class="section-content">
+            <p>You can also delete your account and cloud data yourself, straight away:</p>
+        </div>
+        <div class="steps-box">
+            <ol>
+                <li>Open the game</li>
+                <li>Go to Settings</li>
+                <li>Find Account & Cloud Backup</li>
+                <li>Tap Delete account & data and confirm</li>
+            </ol>
+            <p style="margin-top: 1rem; font-weight: 600; color: #ffa94d;">This cannot be undone.</p>
         </div>
 
         <h2>Questions?</h2>
         <div class="content-box">
-            <p>If you have any questions or issues with account deletion, please contact us:</p>
-            <p><strong>Email:</strong> <a href="mailto:zkyxgame@gmail.com" style="color: #ff6b6b; text-decoration: none;">zkyxgame@gmail.com</a></p>
+            <p>Email us at <span class="email-highlight">zkyxgame@gmail.com</span></p>
         </div>
     </section>
 
